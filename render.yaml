@@ -1,0 +1,18 @@
+services:
+  # server deployment
+  - type: web
+    name: nextplate-chakra-ui-server
+    env: node
+    buildCommand: yarn install && yarn web build
+    startCommand: yarn web start
+    healthCheckPath: /api/ping
+  # static deployment
+  - type: web
+    name: nextplate-chakra-ui-static
+    env: static
+    buildCommand: yarn install && yarn web build:static
+    staticPublishPath: ./packages/web/out
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, s-maxage=1, stale-while-revalidate=59

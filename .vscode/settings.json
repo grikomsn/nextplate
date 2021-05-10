@@ -1,0 +1,22 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.workingDirectories": [
+    {
+      "!cwd": false,
+      "pattern": "packages/*"
+    }
+  ],
+  "npm.packageManager": "yarn"
+}

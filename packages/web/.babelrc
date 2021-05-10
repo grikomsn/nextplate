@@ -1,0 +1,5 @@
+// https://nextjs.org/docs/advanced-features/customizing-babel-config
+{
+  "presets": ["next/babel"],
+  "plugins": []
+}
